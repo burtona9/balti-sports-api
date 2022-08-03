@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const fixtures = require('./api/fixtures');
+const fixtures = require('./public/api/fixtures');
 
 app.use(express.json({extended:false}));
 
