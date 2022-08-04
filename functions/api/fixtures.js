@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/', async (req,res) => {
+router.get('/test', async (req,res) => {
     try {
         
         res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
