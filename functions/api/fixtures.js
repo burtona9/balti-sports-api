@@ -1,16 +1,16 @@
 const express = require('express');
+const axios = require('axios')
+const cheerio = require('cheerio');
 const router = express.Router();
 
+router.get('/timestamp', (request,response) => {
+    response.send(`Date ${Date.now()}`);
+} )
 
-router.get('/test', async (req,res) => {
+router.get('/fixtures',  (req,res) => {
     try {
-        
-        res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-
-        res.json({
-            status:200,
-            message: 'Got data successfully',
-        });
+        const fixtures = {'testy':'testy'};
+        res.json({fixtures});
     } catch (error){
         console.error(error);
         return res.status(500).send('Server error');
