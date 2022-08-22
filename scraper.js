@@ -33,5 +33,3 @@
 // }
 
 // module.exports = getFixtures;
-
-module.exports = ()=>{return {'test':'testy'};};

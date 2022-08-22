@@ -1,9 +1,13 @@
 const functions = require("firebase-functions");
 const express = require('express');
-const fixtures = require('./api/fixtures');
-const app = express();
+const router = express.Router();
+const cors = require('cors');
 
-app.use('/api',fixtures);
+const routes = require('./api/routes');
+
+const app = express();
+app.use(cors());
+app.use('/api',routes);
 
 
 exports.app = functions.https.onRequest(app);
